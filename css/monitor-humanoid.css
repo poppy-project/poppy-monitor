@@ -162,7 +162,7 @@ transform:scale(3) rotate(-90deg) translate(-10px,-10px);
 
 
 .poppy_picture{
-  width:759px;
+  width:1000px;
   height:1000px;
   background-color: transparent;
   background-image: url(../img/humanoid-motorbloc-links.svg), url(../img/poppy-humanoid.png);
@@ -207,24 +207,24 @@ li.motor.ardent {
 }
 
 
-#motor_head_y{top:70px; left:220px;}
-#motor_head_z{top:70px; left:430px;}
+#motor_head_y{top:5px; left:300px;}
+#motor_head_z{top:5px; left:600px;}
 
-#motor_l_shoulder_y{top:160px; left:460px;}
-#motor_l_shoulder_x{top:190px; left:585px;}
-#motor_l_arm_z{top:320px; left:580px;}
-#motor_l_elbow_y{top:260px; left:710px;}
+#motor_l_shoulder_y{top:80px; left:600px;}
+#motor_l_shoulder_x{top:100px; left:730px;}
+#motor_l_arm_z{top:260px; left:780px;}
+#motor_l_elbow_y{top:120px; left:850px;}
 
-#motor_r_shoulder_y{top:145px; left:195px;}
-#motor_r_shoulder_x{top:165px; left:60px;}
-#motor_r_arm_z{top:330px; left:90px;}
-#motor_r_elbow_y{top:270px; left:0px;}
+#motor_r_shoulder_y{top:80px; left:290px;}
+#motor_r_shoulder_x{top:80px; left:150px;}
+#motor_r_arm_z{top:240px; left:180px;}
+#motor_r_elbow_y{top:240px; left:50px;}
 
-#motor_bust_y{top:290px; left:210px;}
+#motor_bust_y{top:240px; left:310px;}
 #motor_bust_x{top:315px; left:445px;}
-#motor_abs_z{top:360px; left:210px;}
+#motor_abs_z{top:320px; left:310px;}
 #motor_abs_x{top:390px; left:445px;}
-#motor_abs_y{top:435px; left:210px;}
+#motor_abs_y{top:400px; left:310px;}
 
 #motor_r_hip_y{top:520px; left:150px;}
 #motor_r_hip_x{top:590px; left:200px;}
