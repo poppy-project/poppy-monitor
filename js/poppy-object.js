@@ -5,28 +5,31 @@
   var Poppy = {
     refresher: null,
 
-    // Url of poppy rest api REST api
-    url: sessionStorage.getItem('poppy_url') ? sessionStorage.getItem('poppy_url'): 'http://localhost:8080',
-
     initUrl: function() {
       var anchor = window.location.hash;
       var hostname = window.location.hostname;
+      var session_URL = localStorage.getItem('poppy_url');
       var url;
 
       if (anchor != '') {
         // return rest url for URLs like: http://localhost/index.html#open=http://localhost:8080
         url = anchor.split('=')[1];
+      } else if (session_URL != null) {
+        if (session_URL.split(':')[0] != 'http') {
+          url = 'http://' + session_URL
+        } else {
+          url = session_URL;
+        }
       } else if (hostname == '') {
         // for file:// URLs
-        url = sessionStorage.getItem('poppy_url') ? sessionStorage.getItem('poppy_url'): 'http://localhost:8080';
+        url = 'http://localhost:8080';
       } else {
         url = 'http://' + hostname + ':8080';
       }
-      sessionStorage.setItem('poppy_url', url);
+      localStorage.setItem('poppy_url', url);
       Poppy.url = url;
       return url
     },
-
 
     /** Load Robot status and Poppy manager * */
     getRobot: function() {
@@ -34,10 +37,11 @@
         success: function(data) {
           Poppy.update(data);
           Poppy.trigger('connected');
-          Poppy.refresher = setTimeout(Poppy.getRobot, 10);
+          Poppy.refresher = setTimeout(Poppy.getRobot, 100);
         },
         error: function(data) {
           Poppy.trigger('disconnected');
+          Poppy.refresher = setTimeout(Poppy.getRobot, 100);
         }
       });
     },
@@ -48,6 +52,7 @@
      */
     update: function(robot) {
       Poppy.robot = robot;
+      //Poppy.initUrl();
       Poppy._applyPositions();
       Poppy.trigger('poppy.robot.updated', robot);
     },
