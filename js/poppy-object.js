@@ -34,7 +34,7 @@
         success: function(data) {
           Poppy.update(data);
           Poppy.trigger('connected');
-          Poppy.refresher = setTimeout(Poppy.getRobot, 10);
+          Poppy.refresher = setTimeout(Poppy.getRobot, 100);
         },
         error: function(data) {
           Poppy.trigger('disconnected');

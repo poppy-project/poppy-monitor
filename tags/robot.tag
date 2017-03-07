@@ -63,6 +63,7 @@
     self.change_url = function(e){
       if (e.keyCode == 13) {
         self._url_open = false;
+		Poppy.get_Robot();
       }
       Poppy.url = document.getElementById('poppy_url').value;
       sessionStorage.setItem("poppy_url",Poppy.url);
