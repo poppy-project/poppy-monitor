@@ -38,6 +38,7 @@
         },
         error: function(data) {
           Poppy.trigger('disconnected');
+		  Poppy.refresher = setTimeout(Poppy.getRobot, 300);
         }
       });
     },
