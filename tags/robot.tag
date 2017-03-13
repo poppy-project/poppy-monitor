@@ -62,10 +62,10 @@
 
    self.change_url = function(e){
      if (e.keyCode == 13) {
-	   self._url_open = false;
+       self._url_open = false;
 	 } 
-	 Poppy.url = document.getElementById('poppy_url').value;
-	 sessionStorage.setItem("poppy_url",Poppy.url);
+     Poppy.url = document.getElementById('poppy_url').value;
+     sessionStorage.setItem("poppy_url",Poppy.url);
    };
 
     Poppy.on("poppy.robot.updated", function(robot) {
