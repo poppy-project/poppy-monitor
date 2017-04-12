@@ -1,0 +1,33 @@
+.poppy_picture {
+  background-image: url(../img/poppy-ergo-jr.png);
+}
+
+#motor_m1 {
+  top: 450px;
+  left: 450px;
+}
+
+#motor_m2 {
+  top: 325px;
+  left: 450px;
+}
+
+#motor_m3 {
+  top: 200px;
+  left: 450px;
+}
+
+#motor_m4 {
+  top: 75px;
+  left: 400px;
+}
+
+#motor_m5 {
+  top: 25px;
+  left: 175px;
+}
+
+#motor_m6 {
+  top: 50px;
+  left: 10px;
+}

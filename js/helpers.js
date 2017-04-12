@@ -1,4 +1,6 @@
-"use strict";
+'use strict';
+
+/* global _,Draggabilly */
 
 /**
  *
@@ -16,7 +18,7 @@ function polarToCartesian(centerX, centerY, radius, angleInDegrees) {
 }
 
 /**
- * Generate svg path to trace a "pie" from angles.
+ * Generate svg path to trace a 'pie' from angles.
  * @param centerX
  * @param centerY
  * @param radius
@@ -35,7 +37,7 @@ function svg_arc_path(centerX, centerY, radius, low, up) {
   if (up < low) {
     reverse_arc = '0 ';
   }
-  return [ 'M', centerX, ' ', centerY, ' ', a1.join(" "), '  A', radius, ' ', radius, ' 0 ', large_arc, reverse_arc, a2.join(" "), ' Z' ].join('');
+  return [ 'M', centerX, ' ', centerY, ' ', a1.join(' '), '  A', radius, ' ', radius, ' 0 ', large_arc, reverse_arc, a2.join(' '), ' Z' ].join('');
 }
 
 /** Functions called manually to help positioning motor block on picture */
@@ -44,18 +46,16 @@ function activateDND() {
   var draggableElems = document.querySelectorAll('li.motor');
   // array of Draggabillies
   // init Draggabillies
-  for ( var i = 0, len = draggableElems.length; i < len; i++) {
+  for (var i = 0, len = draggableElems.length; i < len; i++) {
     var draggableElem = draggableElems[i];
-    draggableElem.style.position = "absolute";
-    var draggie = new Draggabilly(draggableElem, {
-    // options...
-    });
+    draggableElem.style.position = 'absolute';
+    var draggie = new Draggabilly(draggableElem, {});
     draggies.push(draggie);
   }
 }
 
 function motorCss() {
-  console.log(_.map(document.getElementsByClassName('motor'), function(motor, i) {
-    return [ '#', motor.id, "{top:", motor.style.top, "; left:", motor.style.left, ";}" ].join('');
+  console.log(_.map(document.getElementsByClassName('motor'), function(motor) {
+    return [ '#', motor.id, '{top:', motor.style.top, '; left:', motor.style.left, ';}' ].join('');
   }).join('\n'));
 }

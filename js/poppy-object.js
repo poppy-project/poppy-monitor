@@ -1,4 +1,7 @@
 'use strict';
+
+/* global _,riot,notifire,getJSON,postJSON */
+
 (function(global) {
 
   /** Poppy model object **/
@@ -24,7 +27,8 @@
       }
       sessionStorage.setItem('poppy_url', url);
       Poppy.url = url;
-      return url
+
+      return url;
     },
 
 
@@ -36,9 +40,9 @@
           Poppy.trigger('connected');
           Poppy.refresher = setTimeout(Poppy.getRobot, 100);
         },
-        error: function(data) {
+        error: function() {
           Poppy.trigger('disconnected');
-		  Poppy.refresher = setTimeout(Poppy.getRobot, 300);
+          Poppy.refresher = setTimeout(Poppy.getRobot, 300);
         }
       });
     },
@@ -84,7 +88,7 @@
      */
     setRegister: function(motor, register, value) {
       postJSON([ Poppy.url, '/motor/', motor, '/register/', register, '/value.json' ].join(''), value, {
-        success: function(/* data */) {},
+        success: function() {},
         error: function(data) {
           notifire({
             msg: [ motor, '.', register, ' = ', JSON.stringify(value), ' Erreur !' ].join(''),
@@ -118,7 +122,7 @@
       }
 
       postJSON([ Poppy.url, '/primitive/', primitive, '/method/', action, '/args.json' ].join(''), args, {
-        success: function(data) {
+        success: function() {
           notifire({
             msg: [ primitive, '.', action, '(', argsToStr, ') OK' ].join('')
           });
@@ -157,7 +161,7 @@
      */
     setPrimitiveProperty: function(primitive, property, value) {
       postJSON([ Poppy.url, '/primitive/', primitive, '/property/', property, '/value.json' ].join(''), value, {
-        success: function(data) {
+        success: function(/* data */) {
           notifire({
             msg: [ primitive, '.', property, '=', JSON.stringify(value), ' : OK !' ].join('')
           });

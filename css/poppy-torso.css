@@ -1,0 +1,68 @@
+.poppy_picture {
+  background-image: url(../img/poppy-torso-motorbox-links.svg), url(../img/poppy-torso.png);
+}
+
+#motor_head_y {
+  top: 85px;
+  left: 185px;
+}
+
+#motor_head_z {
+  top: 100px;
+  left: 335px;
+}
+
+#motor_l_shoulder_y {
+  top: 195px;
+  left: 370px;
+}
+
+#motor_l_shoulder_x {
+  top: 360px;
+  left: 350px;
+}
+
+#motor_l_arm_z {
+  top: 245px;
+  left: 500px;
+}
+
+#motor_l_elbow_y {
+  top: 370px;
+  left: 510px;
+}
+
+#motor_r_shoulder_y {
+  top: 180px;
+  left: 125px;
+}
+
+#motor_r_shoulder_x {
+  top: 325px;
+  left: 125px;
+}
+
+#motor_r_arm_z {
+  top: 155px;
+  left: 0;
+}
+
+#motor_r_elbow_y {
+  top: 300px;
+  left: 0;
+}
+
+#motor_bust_y {
+  top: 420px;
+  left: 145px;
+}
+
+#motor_bust_x {
+  top: 450px;
+  left: 370px;
+}
+
+#motor_abs_z {
+  top: 500px;
+  left: 250px;
+}

@@ -31,6 +31,15 @@ robot = PoppyHumanoid(use_http=True, start_services=True)
 
 Open the index.html file in your browser, click on the red broken link (near the title) and configure the rest api url, for example `http://poppy.local:8080`. If the url is correct and the rest server is running the link will goes green and informations about your robot should appear.
 
+## Testing
+
+`nodejs` is required to perform tests.
+
+```bash
+npm install --only=dev
+npm run test
+```
 
 ## Licence
+
 GNU GPL v3

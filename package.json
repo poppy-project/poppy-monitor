@@ -1,0 +1,27 @@
+{
+  "name": "poppy-monitor",
+  "version": "0.0.1",
+  "description": "Web interface to monitor poppy creatures",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^3.19.0",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "scripts": {
+    "lint-css": "stylelint \"./css/*.css\"",
+    "lint-js": "eslint \"./js/*.js\"",
+    "test": "npm run lint-css && npm run lint-js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppy-project/poppy-monitor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poppy-project/poppy-monitor/issues"
+  },
+  "homepage": "https://github.com/poppy-project/poppy-monitor#readme"
+}

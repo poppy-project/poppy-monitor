@@ -1,0 +1,126 @@
+body {
+  font-size: 9pt;
+}
+
+sub small,
+small sub,
+sup small,
+small sup {
+  font-size: 6pt;
+}
+
+.motors {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.motor {
+  display: inline-block;
+  list-style-type: none;
+  margin: 2px;
+  border-radius: 5px;
+  padding: 0;
+  position: absolute;
+  width: 110px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0.5px 0.5px 4px rgba(0, 0, 0, 0.6);
+  border: 1px solid #aaa;
+}
+
+.motor .name {
+  background-color: rgba(200, 200, 200, 0.8);
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 2px 5px;
+  white-space: nowrap;
+}
+
+.motor.hot .name { background-color: #fcf8e3; }
+.motor.ardent .name { background-color: #f2dede; }
+
+.motor.ardent {
+  border: 1px solid #d11919;
+  border-radius: 6px;
+  animation-name: glow;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 500ms;
+}
+
+.motor .detail { padding: 5px 5px 0; }
+
+.motor .more {
+  max-height: 0;
+  transition: max-height 0.2s ease;
+}
+
+.motor:hover {
+  z-index: 100;
+}
+
+.motor:hover .more {
+  max-height: 150px;
+}
+
+.angle {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 25px;
+  right: 5px;
+  background-size: cover;
+  transition: transform 0.2s;
+  transform: rotate(-90deg);
+}
+
+.temperature {
+  color: #3c763d;
+}
+
+.temperature.hot {
+  color: #8a6d3b;
+}
+
+.temperature.ardent {
+  color: #a94442;
+}
+
+.blink {
+  animation-name: blinker;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blinker {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px #600; }
+  100% { box-shadow: 0 0 25px #600; }
+}
+
+.poppy_picture {
+  width: 600px;
+  height: 650px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.panel.primitive {
+  margin-bottom: 5px;
+}
+
+.panel.primitive .panel-heading {
+  padding: 2px 3px;
+}

@@ -1,0 +1,130 @@
+.poppy_picture {
+  width: 759px;
+  height: 1000px;
+  background-image: url(../img/poppy-humanoid-motorbloc-links.svg), url(../img/poppy-humanoid.png);
+}
+
+#motor_head_y {
+  top: 70px;
+  left: 220px;
+}
+
+#motor_head_z {
+  top: 70px;
+  left: 430px;
+}
+
+#motor_l_shoulder_y {
+  top: 160px;
+  left: 460px;
+}
+
+#motor_l_shoulder_x {
+  top: 190px;
+  left: 585px;
+}
+
+#motor_l_arm_z {
+  top: 320px;
+  left: 580px;
+}
+
+#motor_l_elbow_y {
+  top: 260px;
+  left: 710px;
+}
+
+#motor_r_shoulder_y {
+  top: 145px;
+  left: 195px;
+}
+
+#motor_r_shoulder_x {
+  top: 165px;
+  left: 60px;
+}
+
+#motor_r_arm_z {
+  top: 330px;
+  left: 90px;
+}
+
+#motor_r_elbow_y {
+  top: 270px;
+  left: 0;
+}
+
+#motor_bust_y {
+  top: 290px;
+  left: 210px;
+}
+
+#motor_bust_x {
+  top: 315px;
+  left: 445px;
+}
+
+#motor_abs_z {
+  top: 360px;
+  left: 210px;
+}
+
+#motor_abs_x {
+  top: 390px;
+  left: 445px;
+}
+
+#motor_abs_y {
+  top: 435px;
+  left: 210px;
+}
+
+#motor_r_hip_y {
+  top: 520px;
+  left: 150px;
+}
+
+#motor_r_hip_x {
+  top: 590px;
+  left: 200px;
+}
+
+#motor_r_hip_z {
+  top: 440px;
+  left: 80px;
+}
+
+#motor_r_knee_y {
+  top: 680px;
+  left: 200px;
+}
+
+#motor_r_ankle_y {
+  top: 790px;
+  left: 160px;
+}
+
+#motor_l_hip_x {
+  top: 565px;
+  left: 470px;
+}
+
+#motor_l_hip_y {
+  top: 485px;
+  left: 480px;
+}
+
+#motor_l_hip_z {
+  top: 440px;
+  left: 600px;
+}
+
+#motor_l_knee_y {
+  top: 670px;
+  left: 470px;
+}
+
+#motor_l_ankle_y {
+  top: 790px;
+  left: 470px;
+}
